@@ -18,12 +18,20 @@ POLL_SEC = 0.05
 
 # Channel thresholds
 THRESHOLDS = {
-    3: 0.0000250038, 4: 0.0000242909, 5: 0.0000230892,  # Instrumental
-    6: 0.0001397092,  # Lapel
-    7: 0.0000695445,  # Pulpit
-    8: 0.0000318688,  # White
-    9: 0.0000396479, 10: 0.0000706872, 11: 0.0000386573, 12: 0.0000506066,  # Handheld
-    13: 0.0000525409, 14: 0.0000326058, 15: 0.0000326486, 16: 0.0000728689  # Choir
+    3: 0.0000165134,  # Instrumental
+    4: 0.0000148019,  # Instrumental
+    5: 0.0000151569,  # Instrumental
+    6: 0.0000173300,  # Lapel
+    7: 0.0000421634,  # Pulpit
+    8: 0.0000298422,  # White
+    9: 0.0000536250,  # Handheld
+    10: 0.0000735157,  # Handheld
+    11: 0.0000388628,  # Handheld
+    12: 0.0000366700,  # Handheld
+    13: 0.0000306327,  # Choir
+    14: 0.0000243578,  # Choir
+    15: 0.0000200554,  # Choir
+    16: 0.0000227090  # Choir
 }
 
 GROUP_CHANNELS = {
@@ -115,7 +123,10 @@ def evaluate_levels(values):
         if ch not in channel_max or val > channel_max[ch]:
             channel_max[ch] = val
     for group, chans in GROUP_CHANNELS.items():
-        indicators[f"group_low_{group}"] = any(indicators.get(f"ch{ch}_low", False) for ch in chans)
+        group_key = f"group_low_{group}"
+        indicators[group_key] = any(indicators.get(f"ch{ch}_low", False) for ch in chans)
+        if group_key not in indicators:
+            indicators[group_key] = False  # Fallback in case evaluation fails
 
 
 def update_gui():
@@ -185,6 +196,7 @@ def update_booleans():
             indicators[f"group_mute_{group}"] = all(not state.get(ch, True) for ch in chans)
     for dca in DCAS:
         indicators[f"mute_dca{dca}"] = not state.get(f"dca{dca}", True)
+    print(indicators)
 
 
 def build_poll(ch):
