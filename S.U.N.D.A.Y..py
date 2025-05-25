@@ -30,7 +30,7 @@ THRESHOLDS = {
     3: 0.0000165134,  # Instrumental
     4: 0.0000148019,  # Instrumental
     5: 0.0000151569,  # Instrumental
-    6: 0.0000173300,  # Lapel
+    6: 0.0000190000,  # Lapel
     7: 0.0000421634,  # Pulpit
     8: 0.0000298422,  # White
     9: 0.0000536250,  # Handheld
