@@ -49,7 +49,7 @@ lock = threading.Lock()
 
 # --- GUI Initialization ---
 from screeninfo import get_monitors
-DISPLAY_INDEX = 0
+DISPLAY_INDEX = 1
 monitor = get_monitors()[DISPLAY_INDEX]
 monitor_x, monitor_y, monitor_width = monitor.x, monitor.y, monitor.width
 
