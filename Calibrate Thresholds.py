@@ -11,7 +11,7 @@ X32_PORT = 10023
 LOCAL_PORT = 10025
 SUBSCRIPTION_NAME = 'mtrs'
 METERS_PATH = '/meters/1'
-SCRIPT_PATH = 'OSC Update1R.py'  # Path to the target script
+SCRIPT_PATH = 'S.U.N.D.A.Y..py'  # Path to the target script
 
 CHANNELS_TO_CALIBRATE = list(range(3, 17))
 COLLECTION_DURATION = 3  # seconds

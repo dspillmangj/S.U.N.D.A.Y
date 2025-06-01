@@ -32,7 +32,7 @@ THRESHOLDS = {
     5: 0.0000151569,  # Instrumental
     6: 0.0000190000,  # Lapel
     7: 0.0000421634,  # Pulpit
-    8: 0.0000298422,  # White
+    8: 0.0000489722,  # White
     9: 0.0000536250,  # Handheld
     10: 0.0000735157,  # Handheld
     11: 0.0000388628,  # Handheld
@@ -49,7 +49,7 @@ lock = threading.Lock()
 
 # --- GUI Initialization ---
 from screeninfo import get_monitors
-DISPLAY_INDEX = 1
+DISPLAY_INDEX = 0
 monitor = get_monitors()[DISPLAY_INDEX]
 monitor_x, monitor_y, monitor_width = monitor.x, monitor.y, monitor.width
 
