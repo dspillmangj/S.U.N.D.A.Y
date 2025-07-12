@@ -1,0 +1,5 @@
+{
+  "latest_version": "1.1.0",
+  "download_url": "https://github.com/YOUR_USERNAME/YOUR_REPO/archive/refs/heads/main.zip",
+  "notes": "🎉 Added auto-update support and fixed non-fullscreen label bug."
+}
