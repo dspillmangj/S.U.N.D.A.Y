@@ -1,0 +1,59 @@
+{
+  "FULLSCREEN_MODE": false,
+  "X32_IP": "192.168.3.110",
+  "X32_PORT": 10023,
+  "LOCAL_PORT": 10024,
+  "SUBSCRIPTION_NAME": "mtrs",
+  "METERS_PATH": "/meters/1",
+  "RENEW_INTERVAL": 9.0,
+  "POLL_SEC": 0.05,
+  "OBS_HOST": "LBC-AV1.local",
+  "OBS_PORT": 4455,
+  "OBS_PASSWORD": "161616",
+  "GROUP_CHANNELS": {
+    "Instrumental": [
+      3,
+      4,
+      5
+    ],
+    "Handheld": [
+      9,
+      10,
+      11,
+      12
+    ],
+    "Choir": [
+      13,
+      14,
+      15,
+      16
+    ]
+  },
+  "INDIVIDUAL_CHANNELS": [
+    6,
+    7,
+    8
+  ],
+  "DCAS": [
+    6,
+    7,
+    8
+  ],
+  "THRESHOLDS": {
+    "3": 1.65134e-05,
+    "4": 1.48019e-05,
+    "5": 1.51569e-05,
+    "6": 1.9e-05,
+    "7": 4.21634e-05,
+    "8": 3.86473e-05,
+    "9": 5.3625e-05,
+    "10": 7.35157e-05,
+    "11": 3.88628e-05,
+    "12": 3.667e-05,
+    "13": 3.06327e-05,
+    "14": 2.43578e-05,
+    "15": 2.00554e-05,
+    "16": 2.2709e-05
+  },
+  "DISPLAY_INDEX": 1
+}
